@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, jsonify, session
+import sys
+print("Python version:", sys.version)
 import sqlite3
 import hashlib
 from datetime import datetime
