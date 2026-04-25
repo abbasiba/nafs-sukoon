@@ -1,14 +1,17 @@
 {
   "functions": {
-    "api/index.py": {
-      "runtime": "python3.9",
+    "api/index.js": {
       "maxDuration": 30
     }
   },
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "api/index.py"
+      "dest": "/api/index.js"
     }
   ]
 }
