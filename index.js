@@ -44,6 +44,9 @@ const groq = new Groq({
 
 // AI Response - Yeh ab age/gender nahi puchega agar pehle se hai
 async function getAIResponse(userMessage, username, userAge, userGender, userName) {
+  // TEST: Check if API Key exists
+  console.log("GROQ_API_KEY exists:", !!process.env.GROQ_API_KEY);
+  
   // Agar API key nahi hai to simple response de
   if (!process.env.GROQ_API_KEY) {
     return getSimpleResponse(userMessage, userAge, userGender);
